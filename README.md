@@ -6,9 +6,7 @@ A simple 2D drawing library to ease the use of the HTML5 Canvas API. Made with T
 1. [Installation](#Installation)
 2. [Usage](#usage)
 3. [Documentation](#documentation)
-4. [Contributing](#contributing)
-5. [Credits](#credits)
-6. [License](#license)
+4. [License](#license)
 
 # Installation
 Open a command prompt or terminal and run
@@ -295,3 +293,6 @@ An RGB/hex color class that contains useful methods for translating color format
 * **setHex(hex)**
 	* Sets the RGBA values of this Color object to the supplied hex string.
   * *param* `hex` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> A hex color value string.
+
+# License
+This project and all of its code are under the permissive MIT license. You can read more here: [LICENSE](https://github.com/mapokapo/graphical-engine/blob/master/LICENSE)
