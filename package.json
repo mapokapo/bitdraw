@@ -33,5 +33,6 @@
   "homepage": "https://github.com/mapokapo/graphical-engine#readme",
   "devDependencies": {
     "typescript": "^3.9.7"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
