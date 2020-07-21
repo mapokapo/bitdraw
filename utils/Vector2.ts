@@ -1,3 +1,5 @@
+//A 2D vector class that contains useful methods for creating and manipulating vectors.
+
 export default class Vector2 {
   public x: number;
   public y: number;
@@ -6,7 +8,11 @@ export default class Vector2 {
     this.x = x;
     this.y = y;
   }
-
+  /**
+   * Creates a new vector from the coordinates of the supplied vector.
+   * @param v A vector.
+   * @returns A new vector.
+   */
   static from(v: Vector2): Vector2 {
     return new Vector2(v.x, v.y);
   }
@@ -38,7 +44,7 @@ export default class Vector2 {
   };
   
   /**
-   * Sets the vectors length.
+   * Sets the vector's length.
    * @param magnitude The number to set the vectors magnitude to.
    */
   setMagnitude(magnitude: number): void {
@@ -83,23 +89,7 @@ export default class Vector2 {
   }
 
   /**
-   * Returns an absolute value of this vector.
-   * This essentially puts the vector into the first quadrant of the coordinate plane.
-   * @returns An absolute vector.
-   */
-  absolute(): Vector2 {
-    return new Vector2(Math.abs(this.x), Math.abs(this.y));
-  }
-
-  /**
-   * Makes this vector absolute.
-   */
-  absoluteAndMutate(): void {
-    this.set(this.absolute());
-  }
-
-  /**
-   * Returns the result of multiplying this vector by the provided number.
+   * Returns the result of multiplying this vector by the provided scalar.
    * @param scalar The number by which to multiply this vector.
    * @returns A new vector.
    */
@@ -122,7 +112,7 @@ export default class Vector2 {
    */
   divide(scalar: number): Vector2 {
     return new Vector2(this.x / scalar, this.y / scalar);
-  };
+  }
   
   /**
    * Divides this vector by the provided number.
@@ -131,7 +121,23 @@ export default class Vector2 {
   divideAndMutate(scalar: number): void {
     this.x /= scalar;
     this.y /= scalar;
-  };
+  }
+
+  /**
+   * Returns an absolute value of this vector.
+   * This essentially puts the vector into the first quadrant of the coordinate plane.
+   * @returns An absolute vector.
+   */
+  absolute(): Vector2 {
+    return new Vector2(Math.abs(this.x), Math.abs(this.y));
+  }
+
+  /**
+   * Makes this vector absolute.
+   */
+  absoluteAndMutate(): void {
+    this.set(this.absolute());
+  }
 
   /**
    * Returns a vector identical to this one.
@@ -169,10 +175,21 @@ export default class Vector2 {
 
   /**
    * Sets this vector's coordinates to that of another vector.
+   * @param v Another vector.
    */
   set(v: Vector2): void {
     this.x = v.x; this.y = v.y;
   }
+
+  /**
+   * Sets this vector's X and Y coordinates the supplied parameters.
+   * @param x The X coordinate.
+   * @param x The Y coordinate.
+   */
+  setCoords(x: number, y: number): void {
+    this.x = x;
+    this.y = y;
+  }    
 
   /**
    * Returns the result of normalising this vector.

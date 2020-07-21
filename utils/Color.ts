@@ -1,3 +1,5 @@
+// An RGB/hex color class that contains useful methods for translating color formats.
+
 type RGBObject = {
   r: number;
   g: number;
@@ -43,6 +45,13 @@ export default class Color {
     }
   }
 
+  /**
+   * A helper method that converts an RGB color value to a Hex color value.
+   * @param r Red.
+   * @param g Green.
+   * @param b Blue.
+   * @returns A Hex color value string.
+   */
   static RGBtoHex(r: number, g: number, b: number): string {
     const componentToHex = (c: number): string => {
       const hex = c.toString(16);
@@ -51,6 +60,11 @@ export default class Color {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
 
+  /**
+   * A helper method that converts a Hex color value to an RGB color value.
+   * @param hex A hex color value string.
+   * @returns An object representing an RGB color value. Has `r`, `g`, `b`, and `a` properties.
+   */
   static HexToRGB(hex: string): RGBObject | null {
     const parseFloat = (str: string): number | null => {
       let float: number = 0,
@@ -93,6 +107,10 @@ export default class Color {
       : null;
   }
 
+  /**
+   * Returns a Hex string representation of this Color object.
+   * @returns A Hex color value string.
+   */
   getHex(): string {
     function componentToHex(c: number | undefined) {
       if (c === undefined) {
@@ -104,14 +122,29 @@ export default class Color {
     return "#" + componentToHex(this.r) + componentToHex(this.g) + componentToHex(this.b);
   }
 
+  /**
+   * Returns an RGB string representation of this Color object.
+   * @returns An RGB color value string.
+   */
   getRGB(): string {
     return `rgb(${this.r}, ${this.g}, ${this.b})`;
   }
 
+  /**
+   * Returns an RGBA string representation of this Color object.
+   * @returns An RGBA color value string.
+   */
   getRGBA(): string {
     return `rgba(${this.r}, ${this.g}, ${this.b}, ${this.a})`;
   }
 
+  /**
+   * Sets the RGBA values of this Color object to the supplied RGBA parameters.
+   * @param r Red.
+   * @param g Green.
+   * @param b Blue.
+   * @param a Optional parameter: Alpha.
+   */
   setRGB(r: number, g: number, b: number, a?: number): void {
     this.r = r;
     this.g = g;
@@ -119,6 +152,10 @@ export default class Color {
     this.a = a || 1;
   }
 
+  /**
+   * Sets the RGBA values of this Color object to the supplied hex string.
+   * @param hex A hex color value string.
+   */
   setHex(hex: string): void {
     let _hex: string = hex.trim();
     _hex = hex.substr(hex.indexOf("#") + 1);

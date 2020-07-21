@@ -186,7 +186,7 @@ function arc(loc: Vector2, radius: number, color: Color, startAngle: number, end
  * that functionality is passed onto the `update()` function.
  * @param callback The callback function that executes your code.
  */
-function setup(callback?: Function) {
+function setup(callback: Function) {
   callback && callback();
 }
 
@@ -199,7 +199,7 @@ function setup(callback?: Function) {
  * makes sure it will run at the maximum possible performance.
  * @param callback The callback function that executes your code.
  */
-function update(callback?: Function) {
+function update(callback: Function) {
   let then = Date.now(), now = 0;
   requestAnimationFrame(() => {
     now = Date.now();
