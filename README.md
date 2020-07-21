@@ -55,7 +55,7 @@ You can use the following HTML template for new projects:
 	* [Color](#utilitiescolor)
 
 ## Drawing Methods
-**background(width, height, color)**
+#### background(width, height, color)
 * parameters:
 	* `width` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The new canvas width.
 	* `height` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The new canvas height.
@@ -63,11 +63,11 @@ You can use the following HTML template for new projects:
 * description:
 	* This method resizes the canvas to the specified size, and simply draws a rectangle covering the entire canvas with the specified fill color.
 
-**center()**
+#### center()
 * description:
 	* This function is purely a DOM manipulation function: it centers the canvas element absolutely.
 
-**stroke(loc1, loc2, color, width?)**
+#### stroke(loc1, loc2, color, width?)
 * parameters:
 	* `loc1` - <[Vector2](#utilitiesvector2)> The first point.
 	* `loc2` - <[Vector2](#utilitiesvector2)> The second point.
@@ -76,7 +76,7 @@ You can use the following HTML template for new projects:
 * description:
 	* This methods draws a line connecting the 2 supplied vertices.
 
-**circle(loc, radius, color, fill, width?)**
+#### circle(loc, radius, color, fill, width?)
 * parameters:
 	* `loc` - <[Vector2](#utilitiesvector2)> The central vertex of the circle.
 	* `radius` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The radius of the circle in pixels.
@@ -86,7 +86,7 @@ You can use the following HTML template for new projects:
 * description:
 	* This method draws a circle that can be filled or transparent with a border.
 
-**arc(loc, radius, color, startAngle, endAngle, fill, width?)**
+#### arc(loc, radius, color, startAngle, endAngle, fill, width?)
 * parameters:
 	* `loc` - <[Vector2](#utilitiesvector2)> The center of the arc.
 	* `radius` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The radius of the arc in pixels.
@@ -98,7 +98,7 @@ You can use the following HTML template for new projects:
 * description:
 	* This method draws a circle sector (a *'slice of pie'* shape). The starting and ending angles are in a clockwise order.
 
-**rect(loc1, loc2, color, fill, width?)**
+#### rect(loc1, loc2, color, fill, width?)
 * parameters:
 	* `loc1` - <[Vector2](#utilitiesvector2)> The first vertex of the rectangle.
 	* `loc2` - <[Vector2](#utilitiesvector2)> The vertex opposite/diagonal to the first vertex.
@@ -108,7 +108,7 @@ You can use the following HTML template for new projects:
 * description:
 	* This method draws a rectangle that can be filled or transparent with a border.
 
-**triangle(loc1, loc2, loc3, color, fill, width?)**
+#### triangle(loc1, loc2, loc3, color, fill, width?)
 * parameters:
 	* `loc1` - <[Vector2](#utilitiesvector2)> The first vertex of the triangle.
 	* `loc2` - <[Vector2](#utilitiesvector2)>The second vertex of the triangle.
@@ -119,28 +119,28 @@ You can use the following HTML template for new projects:
 * description:
 	* This function draws a triangle connecting the 3 provided vertices. It can be filled or transparent with a border. The order of the vertices does not matter.
 
-**clear()**
+#### clear()
 * description:
 	* This function simply calls `background()`, except the arguments are always the current canvas width and height, and the color used in the last `background()`call. It is used to clear the canvas.
 
 ## Utility Methods
-**setup(callback)**
+#### setup(callback)
 * parameters:
 	* `callback` - <[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)> The callback that gets executed upon app startup.
 * description:
 	* The callback passed to this method is called once, on app startup. This is initialization and DOM methods should be ideally called, for performance reasons.
 
-**update(callback)**
+#### update(callback)
 * parameters:
 	* `callback` - <[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)([number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type))> The callback that gets executed every frame. It recieves `deltaTime`; the number of miliseconds between the previous and last frame.
 * description:
 	* This function initialises the main app loop. The provided callback is called every frame with the number of miliseconds between the previous and last frame.
 
 ## Globals
-* **canvas** - <[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)> - The canvas element.
-* **ctx** - <[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)> The 2D canvas rendering context.
-* **CANVAS_WIDTH** - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current width of the canvas element.
-* **CANVAS_HEIGHT** - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current height of the canvas element.
+#### canvas - <[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)> - The canvas element.
+#### ctx - <[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)> The 2D canvas rendering context.
+#### CANVAS_WIDTH - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current width of the canvas element.
+#### CANVAS_HEIGHT - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current height of the canvas element.
 
 ## Utilities
 ### class: Vector2
