@@ -61,10 +61,6 @@ You can use the following HTML template for new projects:
 * description:
 	* This method resizes the canvas to the specified size, and simply draws a rectangle covering the entire canvas with the specified fill color.
 
-#### center()
-* description:
-	* This function is purely a DOM manipulation function: it centers the canvas element absolutely.
-
 #### stroke(loc1, loc2, color, width?)
 * parameters:
 	* `loc1` - <[Vector2](#utilitiesvector2)> The first point.
@@ -117,11 +113,13 @@ You can use the following HTML template for new projects:
 * description:
 	* This function draws a triangle connecting the 3 provided vertices. It can be filled or transparent with a border. The order of the vertices does not matter.
 
+## Utility Methods
 #### clear()
 * description:
 	* This function simply calls `background()`, except the arguments are always the current canvas width and height, and the color used in the last `background()`call. It is used to clear the canvas.
-
-## Utility Methods
+#### center()
+* description:
+	* This function is purely a DOM manipulation function: it centers the canvas element absolutely.
 #### setup(callback)
 * parameters:
 	* `callback` - <[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)> The callback that gets executed upon app startup.
