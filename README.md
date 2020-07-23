@@ -133,10 +133,14 @@ You can use the following HTML template for new projects:
 	* This function initialises the main app loop. The provided callback is called every frame with the number of miliseconds between the previous and last frame.
 
 ## Globals
-#### canvas - <[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)> - The canvas element.
-#### ctx - <[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)> The 2D canvas rendering context.
-#### CANVAS_WIDTH - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current width of the canvas element.
-#### CANVAS_HEIGHT - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> The current height of the canvas element.
+#### canvas - <[HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)>
+The canvas element.
+#### ctx - <[CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)>
+The 2D canvas rendering context.
+#### CANVAS_WIDTH - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)>
+The current width of the canvas element.
+#### CANVAS_HEIGHT - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)>
+The current height of the canvas element.
 
 ## Utilities
 ### class: Vector2
