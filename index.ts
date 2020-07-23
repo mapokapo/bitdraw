@@ -1,4 +1,4 @@
-import { Vector2, Color } from "./utils/index";
+import { Vector2, Color } from "./utils/index.js";
 
 const canvas: HTMLCanvasElement = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx: CanvasRenderingContext2D  = canvas.getContext("2d")!;
