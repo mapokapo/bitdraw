@@ -24,7 +24,7 @@ You can use the following HTML template for new projects:
 		<title>graphical-engine Example</title>
 	</head>
 	<body>
-		<canvas id="canvas></canvas>
+		<canvas id="canvas"></canvas>
 		<script src="bundle.js"></script>
 	</body>
 </html>
