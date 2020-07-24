@@ -28,13 +28,18 @@ function background(width: number, height: number, color: Color) {
 
 /**
  * This function is purely a DOM manipulation function: it 
- * absolutely centers the canvas element.
+ * centers the canvas element.
+ * @param absolute Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
  */
-function center() {
-  canvas.style.position = "absolute";
-  canvas.style.top = "50%";
-  canvas.style.left = "50%";
-  canvas.style.transform = "translate(-50%, -50%)";
+function center(absolute: boolean = true) {
+  if (absolute) {
+    canvas.style.position = "absolute";
+    canvas.style.top = "50%";
+    canvas.style.left = "50%";
+    canvas.style.transform = "translate(-50%, -50%)";
+  } else {
+    canvas.style.margin = "auto";
+  }
 }
 
 /**
@@ -42,7 +47,7 @@ function center() {
  * @param loc1 The location of the first point.
  * @param loc2 The location of the second point.
  * @param color The color of the line.
- * @param width Optional parameter: if not specified, defaults to 1. The width of the line in pixels.
+ * @param width The width of the line in pixels. `1` by default.
  * @example stroke(new Vector2(100, 100), new Vector2(500, 200), new Color("rgb(127, 255, 0)"), 5)
  */
 function stroke(loc1: Vector2, loc2: Vector2, color: Color, width?: number) {
@@ -61,11 +66,11 @@ function stroke(loc1: Vector2, loc2: Vector2, color: Color, width?: number) {
  * @param radius The radius of the circle in pixels.
  * @param color The color of the circle.
  * @param fill Wether or not the circle should be filled.
- * @param width Only applies when `fill` is false: the width of the circle border.
+ * @param width Only applies when `fill` is false: the width of the circle border. `1` by default.
  * @example circle(new Vector2(300, 300), 50, new Color("rgb(127, 255, 0)"), false, 5)
  */
 function circle(loc: Vector2, radius: number, color: Color, fill: boolean, width?: number) {
-  ctx.lineWidth = width || 1;
+  ctx.lineWidth = !fill && width ? width : 1;
   ctx.strokeStyle = color.getHex();
   ctx.fillStyle = color.getHex();
   ctx.beginPath();
@@ -80,14 +85,14 @@ function circle(loc: Vector2, radius: number, color: Color, fill: boolean, width
  * @param loc2 The vertex opposite/diagonal to the first vertex.
  * @param color The color of the rectangle.
  * @param fill Wether or not the rectangle should be filled.
- * @param width Only applies when `fill` is false: the width of the rectangle border.
+ * @param width Only applies when `fill` is false: the width of the rectangle border. `1` by default.
  * @example rect(new Vector2(200, 200), new Vector2(100, 100), new Color("rgb(127, 255, 0)"), true)
  */
 function rect(loc1: Vector2, loc2: Vector2, color: Color, fill: boolean, width?: number) {
-  stroke(new Vector2(loc1.x, loc1.y), new Vector2(loc2.x, loc1.y), color, width || 1);
-  stroke(new Vector2(loc1.x, loc1.y), new Vector2(loc1.x, loc2.y), color, width || 1);
-  stroke(new Vector2(loc2.x, loc2.y), new Vector2(loc1.x, loc2.y), color, width || 1);
-  stroke(new Vector2(loc2.x, loc2.y), new Vector2(loc2.x, loc1.y), color, width || 1);
+  stroke(new Vector2(loc1.x, loc1.y), new Vector2(loc2.x, loc1.y), color, !fill && width ? width : undefined);
+  stroke(new Vector2(loc1.x, loc1.y), new Vector2(loc1.x, loc2.y), color, !fill && width ? width : undefined);
+  stroke(new Vector2(loc2.x, loc2.y), new Vector2(loc1.x, loc2.y), color, !fill && width ? width : undefined);
+  stroke(new Vector2(loc2.x, loc2.y), new Vector2(loc2.x, loc1.y), color, !fill && width ? width : undefined);
   if (fill) {
     ctx.fillStyle = color.getHex();
     let v1b = new Vector2(0, 0), v2b = new Vector2(0, 0);
@@ -116,11 +121,11 @@ function rect(loc1: Vector2, loc2: Vector2, color: Color, fill: boolean, width?:
  * @param loc3 The third vertex of the triangle.
  * @param color The color of the triangle.
  * @param fill Wether or not the triangle should be filled.
- * @param width Only applies when `fill` is false: the width of the triangle border.
+ * @param width Only applies when `fill` is false: the width of the triangle border. `1` by default.
  * @example triangle(new Vector2(300, 300), new Vector2(250, 350), new Vector2(200, 250), new Color("rgb(127, 255, 0)"), false, 5)
  */
 function triangle(loc1: Vector2, loc2: Vector2, loc3: Vector2, color: Color, fill: boolean, width?: number) {
-  ctx.lineWidth = width || 1;
+  ctx.lineWidth = !fill && width ? width : 1;
   ctx.strokeStyle = color.getHex();
   ctx.fillStyle = color.getHex();
   ctx.beginPath();
@@ -160,12 +165,12 @@ function clear() {
  * @param startAngle The starting angle of the arc in radians.
  * @param endAngle The ending angle of the arc in radians.
  * @param fill Wether or not the arc should be filled.
- * @param width Only applies when `fill` is false: the width of the lines of the shape.
+ * @param width Only applies when `fill` is false: the width of the lines of the shape. `1` by default.
  * @example arc(new Vector2(300, 300), 50, new Color("rgb(127, 255, 0)"), 270, 0, false, 5)
  */
 function arc(loc: Vector2, radius: number, color: Color, startAngle: number, endAngle: number, fill: boolean,  width?: number) {
   ctx.strokeStyle = color.getHex();
-  ctx.lineWidth = width || 1;
+  ctx.lineWidth = !fill && width ? width : 1;
   ctx.fillStyle = color.getHex();
   ctx.beginPath();
   Math.abs(startAngle - endAngle) !== Math.PI*2 && startAngle !== endAngle && ctx.moveTo(loc.x, loc.y);

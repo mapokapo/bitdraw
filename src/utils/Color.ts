@@ -6,7 +6,9 @@ type RGBObject = {
   b: number;
   a: number;
 };
-
+/**
+ * @todo Implement opacity
+ */
 export default class Color {
   public r: number | undefined;
   public g: number | undefined;
@@ -143,9 +145,9 @@ export default class Color {
    * @param r Red.
    * @param g Green.
    * @param b Blue.
-   * @param a Optional parameter: Alpha.
+   * @param a Alpha. Defaults to 1.
    */
-  setRGB(r: number, g: number, b: number, a?: number): void {
+  setRGB(r: number, g: number, b: number, a: number = 1): void {
     this.r = r;
     this.g = g;
     this.b = b;

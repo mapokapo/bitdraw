@@ -117,9 +117,11 @@ You can use the following HTML template for new projects:
 #### clear()
 * description:
 	* This function simply calls `background()`, except the arguments are always the current canvas width and height, and the color used in the last `background()`call. It is used to clear the canvas.
-#### center()
+#### center(absolute)
+* parameters:
+	* `absolute` - <[?boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
 * description:
-	* This function is purely a DOM manipulation function: it centers the canvas element absolutely.
+	* This function is purely a DOM manipulation function: it centers the canvas element.
 #### setup(callback)
 * parameters:
 	* `callback` - <[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)> The callback that gets executed upon app startup.
@@ -290,7 +292,7 @@ An RGB/hex color class that contains useful methods for translating color format
     * *param* `r` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> Red.
     * *param* `g` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> Green.
     * *param* `b` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> Blue.
-    * *param* `b` - <[?number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> Alpha.
+    * *param* `b` - <[?number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> Alpha. `1` by default.
 
 * **setHex(hex)**
 	* Sets the RGBA values of this Color object to the supplied hex string.
