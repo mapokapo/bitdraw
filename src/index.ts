@@ -31,7 +31,7 @@ function background(width: number, height: number, color: Color) {
  * centers the canvas element.
  * @param absolute Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
  */
-function center(absolute: boolean = true) {
+function center(absolute?: boolean) {
   if (absolute) {
     canvas.style.position = "absolute";
     canvas.style.top = "50%";

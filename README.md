@@ -117,7 +117,7 @@ You can use the following HTML template for new projects:
 #### clear()
 * description:
 	* This function simply calls `background()`, except the arguments are always the current canvas width and height, and the color used in the last `background()`call. It is used to clear the canvas.
-#### center(absolute)
+#### center(absolute?)
 * parameters:
 	* `absolute` - <[?boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
 * description:
@@ -249,9 +249,9 @@ A 2D vector class that contains useful methods for creating and manipulating vec
 * **normaliseAndMutate()**
 	* Normalises this vector.
 
-* **normal(clockwise)**
+* **normal(clockwise?)**
 	* Returns the normal of this vector.
-	* *param* `clockwise` - <[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether to return the clockwise normal of this vector. False by default.
+	* *param* `clockwise` - <[?boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether to return the clockwise normal of this vector. `false` by default.
 	* returns <[Vector2](#utilitiesvector2)> - A normal vector.
 
 ### class: Color

@@ -213,7 +213,7 @@ export default class Vector2 {
    * Defaults to false.
    * @returns A normal vector.
    */
-  normal(clockwise: boolean = false): Vector2 {
+  normal(clockwise?: boolean): Vector2 {
     return new Vector2(clockwise ? this.y : -this.y, clockwise ? -this.x : this.x);
   }
 }
