@@ -18,17 +18,17 @@
     <br />
     <a href="#getting-started-hammer">Get Started</a>
     ·
-    <a href="/issues">Report Bug</a>
+    <a href="https://github.com/mapokapo/graphical-engine/issues">Report Bug</a>
     ·
-    <a href="/issues">Request Feature</a>
+    <a href="https://github.com/mapokapo/graphical-engine/issues">Request Feature</a>
   </p>
 </p>
 
 ## Table of Contents :arrow_down:
 * [About the Project](#about-the-project-information_source)
 * [Getting Started](#getting-started-hammer)
-  * [Quick Start](#quick-start)
   * [Prerequisites](#prerequisites)
+  * [Quick Start](#quick-start)
   * [Installation](#installation)
 * [Usage](#usage-zap)
 * [Documentation](#documentation-book)
@@ -56,10 +56,17 @@ The bundled code published on NPM is built with [Webpack](https://webpack.js.org
 
 ## Getting Started :hammer:
 
-### Quick Start
-1. Clone the [`/misc/examples/`](/mist/examples) folder and cd into it
+### Prerequisites
+* [Node.js](https://nodejs.org/en/download/)
+* NPM
 ```sh
-git clone https://github.com/mapokapo/graphical-engine.git && cd graphical-engine
+$ npm install npm@latest -g
+```
+
+### Quick Start
+1. Clone the repo and cd into the `misc/example/` folder
+```sh
+git clone https://github.com/mapokapo/graphical-engine.git && cd graphical-engine/misc/example
 ```
 2. Install required packages
 ```sh
@@ -70,14 +77,6 @@ npm install
 npm start
 ```
 4. Done! You can now publish your files or double-click your index.html file.
-
-
-### Prerequisites
-* [Node.js](https://nodejs.org/en/download/)
-* NPM
-```sh
-$ npm install npm@latest -g
-```
 
 ### Installation
 1. Create a new NPM project
@@ -105,14 +104,14 @@ This library can be imported through the ES6 `import { ... } from ...` statement
 Using the `import * as Package from ...` statement is **not recommended**, as the bundled files could potentially contain useless code.
 You can also import the library using the CommonJS `require()` function, although this is not recommended as CommonJS modules are not tree-shakable.
 
-You can view more at the [Example](/misc/example)
+You can view more at the [example project](/misc/example).
 
 
 ## TODO :white_check_mark:
 - [ ] Support transparency in the Color class.
 - [ ] Implement additional layers over the Canvas API (text, transform, styles, shapes...)
 
-See the [open issues](/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/mapokapo/graphical-engine/issues) for a list of proposed features (and known issues).
 
 ## Documentation :book:
 1. [Drawing Methods](#drawing-methods)
