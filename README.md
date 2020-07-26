@@ -13,10 +13,10 @@
   <p align="center">
     A fun canvas API :space_invader:
     <br />
-    <a href="#documentation"><strong>Explore the docs</strong></a>
+    <a href="#documentation-book"><strong>Explore the docs</strong></a>
     <br />
     <br />
-    <a href="#getting-started">Get Started</a>
+    <a href="#getting-started-hammer">Get Started</a>
     ·
     <a href="/issues">Report Bug</a>
     ·
@@ -25,17 +25,18 @@
 </p>
 
 ## Table of Contents :arrow_down:
-* [About the Project](#about-the-project)
-* [Getting Started](#getting-started)
+* [About the Project](#about-the-project-information_source)
+* [Getting Started](#getting-started-hammer)
+  * [Quick Start](#quick-start)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Documentation](#documentation)
-* [TODO](#todo)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Usage](#usage-zap)
+* [Documentation](#documentation-book)
+* [TODO](#todo-white_check_mark)
+* [Contributing](#contributing-heart)
+* [License](#license-thumsup)
+* [Contact](#contact-phone)
+* [Acknowledgements](#acknowledgements-innocent)
 
 ## About The Project :information_source:
 ![Bitdraw Code](/misc/images/example.png?raw=true)
@@ -106,6 +107,13 @@ You can also import the library using the CommonJS `require()` function, althoug
 
 You can view more at the [Example](/misc/example)
 
+
+## TODO :white_check_mark:
+- [ ] Support transparency in the Color class.
+- [ ] Implement additional layers over the Canvas API (text, transform, styles, shapes...)
+
+See the [open issues](/issues) for a list of proposed features (and known issues).
+
 ## Documentation :book:
 1. [Drawing Methods](#drawing-methods)
 	* [background](#backgroundwidth-height-color)
@@ -120,10 +128,10 @@ You can view more at the [Example](/misc/example)
 	* [setup](#setupcallback)
 	* [update](#updatecallback)
 3. [Globals](#globals)
-	* [canvas](#canvas---htmlcanvaselement---the-canvas-element)
-	* [ctx](#ctx---canvasrenderingcontext2d-the-2d-canvas-rendering-context)
-	* [CANVAS_WIDTH](#canvas_width---number-the-current-width-of-the-canvas-element)
-	* [CANVAS_HEIGHT](#canvas_height---number-the-current-height-of-the-canvas-element)
+	* [canvas](#canvas---htmlcanvaselement)
+	* [ctx](#ctx---canvasrenderingcontext2d)
+	* [CANVAS_WIDTH](#canvas_width---number)
+	* [CANVAS_HEIGHT](#canvas_height---number)
 4. [Utilities](#utilities)
 	* [Vector2](#class-vector2)
 	* [Color](#class-color)
@@ -374,12 +382,6 @@ An RGB/hex color class that contains useful methods for translating color format
 	* Sets the RGBA values of this Color object to the supplied hex string.
   * *param* `hex` - <[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)> A hex color value string.
 
-## TODO :white_check_mark:
-- [ ] Support transparency in the Color class.
-- [ ] Implement additional layers over the Canvas API (text, transform, styles, shapes...)
-- 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
 ## Contributing :heart:
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -395,7 +397,7 @@ Distributed under the MIT License. See [`LICENSE`](/LICENSE) for more informatio
 ## Contact :phone:
 Bunny - leopetrovic11@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/mapokapo/graphical-engine](https://github.com/mapokapo/graphical-engine)
 
 ## Acknowledgements :innocent:
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
