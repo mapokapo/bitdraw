@@ -1,7 +1,7 @@
-import { setup, update, background, Color, center, circle, Vector2, CANVAS_HEIGHT, CANVAS_WIDTH } from "../../src";
+import { setup, update, background, Color, center, circle, Vector2, CANVAS_HEIGHT, CANVAS_WIDTH } from "../../dist/esm";
 
 setup(() => {
-    background(600, 600, new Color("#000000"));
+    background(600, 400, new Color("#000000"));
     center(true);
 });
 

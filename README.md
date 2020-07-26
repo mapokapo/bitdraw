@@ -1,12 +1,12 @@
-![GitHub issues](https://img.shields.io/github/issues/mapokapo/graphical-engine)
-![GitHub forks](https://img.shields.io/github/forks/mapokapo/graphical-engine)
-![npm bundle size](https://img.shields.io/bundlephobia/min/graphical-engine)
-![npm](https://img.shields.io/npm/v/graphical-engine?label=npm)
-![GitHub](https://img.shields.io/github/license/mapokapo/graphical-engine)
+![GitHub issues](https://img.shields.io/github/issues/mapokapo/bitdraw)
+![GitHub forks](https://img.shields.io/github/forks/mapokapo/bitdraw)
+![npm bundle size](https://img.shields.io/bundlephobia/min/bitdraw)
+![npm](https://img.shields.io/npm/v/bitdraw?label=npm)
+![GitHub](https://img.shields.io/github/license/mapokapo/bitdraw)
 
 <br />
 <p align="center">
-  <a href="https://github.com/mapokapo/graphical-engine">
+  <a href="https://github.com/mapokapo/bitdraw">
     <img src="/misc/images/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">Bitdraw</h3>
@@ -18,9 +18,9 @@
     <br />
     <a href="#getting-started-hammer">Get Started</a>
     ·
-    <a href="https://github.com/mapokapo/graphical-engine/issues">Report Bug</a>
+    <a href="https://github.com/mapokapo/bitdraw/issues">Report Bug</a>
     ·
-    <a href="https://github.com/mapokapo/graphical-engine/issues">Request Feature</a>
+    <a href="https://github.com/mapokapo/bitdraw/issues">Request Feature</a>
   </p>
 </p>
 
@@ -39,7 +39,7 @@
 * [Acknowledgements](#acknowledgements-innocent)
 
 ## About The Project :information_source:
-![Bitdraw Code](/misc/images/example.png?raw=true)
+![Bitdraw Animation](/misc/images/anim.gif?raw=true)
 
 Bitdraw is a simple and opinionated library that eases the use of the HTML5 Canvas API.
 
@@ -64,17 +64,17 @@ $ npm install npm@latest -g
 ```
 
 ### Quick Start
-1. Clone the repo and cd into the `misc/example/` folder
+1. Clone the repo and cd into it
 ```sh
-git clone https://github.com/mapokapo/graphical-engine.git && cd graphical-engine/misc/example
+git clone https://github.com/mapokapo/bitdraw.git && cd bitdraw
 ```
-2. Install required packages
+2. Install required packages and build the module
 ```sh
-npm install
+npm install && npm run tsc
 ```
-3. Run Webpack
+3. cd into the `example/misc/` folder, install required packaged and run Webpack
 ```sh
-npm start
+cd example/misc/ && npm install && npm start
 ```
 4. Done! You can now publish your files or double-click your index.html file.
 
@@ -83,9 +83,9 @@ npm start
 ```sh
 $ npm init
 ```
-2. Install the package
+2. Install the [bitdraw](https://www.npmjs.com/package/bitdraw) package
 ```sh
-$ npm i graphical-engine
+$ npm i bitdraw
 ```
 3. Create an index.html file with a `<canvas id="canvas"></canvas>` inside it, as well as a link to your bundled code. You can find a template [here](/misc/example/index.html).
 4. Install bundling software
@@ -106,12 +106,13 @@ You can also import the library using the CommonJS `require()` function, althoug
 
 You can view more at the [example project](/misc/example).
 
+[Bitdraw Code](/misc/images/example.png?raw=true)
 
 ## TODO :white_check_mark:
 - [ ] Support transparency in the Color class.
 - [ ] Implement additional layers over the Canvas API (text, transform, styles, shapes...)
 
-See the [open issues](https://github.com/mapokapo/graphical-engine/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/mapokapo/bitdraw/issues) for a list of proposed features (and known issues).
 
 ## Documentation :book:
 1. [Drawing Methods](#drawing-methods)
@@ -396,7 +397,7 @@ Distributed under the MIT License. See [`LICENSE`](/LICENSE) for more informatio
 ## Contact :phone:
 Bunny - leopetrovic11@gmail.com
 
-Project Link: [https://github.com/mapokapo/graphical-engine](https://github.com/mapokapo/graphical-engine)
+Project Link: [https://github.com/mapokapo/bitdraw](https://github.com/mapokapo/bitdraw)
 
 ## Acknowledgements :innocent:
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
