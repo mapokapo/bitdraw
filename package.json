@@ -1,5 +1,5 @@
 {
-  "name": "@mapokapo/bitdraw",
+  "name": "bitdraw",
   "version": "0.1.8",
   "description": "A simple library that eases the use of the HTML5 Canvas API",
   "main": "./dist/cjs/index.js",
