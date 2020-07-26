@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "CommonJS",
+      "lib": ["es5", "es6", "dom"],
+      "allowJs": true,
+      "sourceMap": true,
+      "outDir": "./dist/",
+      "removeComments": true,
+      "noImplicitAny": true,
+      "alwaysStrict": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "exclude": [
+      "./dist/",
+      "./node_modules/"
+    ]
+  }
+  
