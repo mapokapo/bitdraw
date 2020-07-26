@@ -119,7 +119,7 @@ You can use the following HTML template for new projects:
 	* This function simply calls `background()`, except the arguments are always the current canvas width and height, and the color used in the last `background()`call. It is used to clear the canvas.
 #### center(absolute?)
 * parameters:
-	* `absolute` - <[?boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
+	* `absolute` - <[?boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)> Whether the element should be centered absolutely using `transform: translate(-50%, -50%)`, or use `margin: auto;` (in a flex parent). `true` by default.
 * description:
 	* This function is purely a DOM manipulation function: it centers the canvas element.
 #### setup(callback)

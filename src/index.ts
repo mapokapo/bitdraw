@@ -29,7 +29,7 @@ function background(width: number, height: number, color: Color) {
 /**
  * This function is purely a DOM manipulation function: it 
  * centers the canvas element.
- * @param absolute Whether the element should be centered absolutely, or use `margin: auto;` (in a flex parent). `true` by default.
+ * @param absolute Whether the element should be centered absolutely using `transform: translate(-50%, -50%)`, or use `margin: auto;` (in a flex parent). `true` by default.
  */
 function center(absolute?: boolean) {
   if (absolute) {
@@ -143,11 +143,6 @@ function triangle(loc1: Vector2, loc2: Vector2, loc3: Vector2, color: Color, fil
  * the arguments are always the current canvas width
  * and height, and the color used in the last `background()` call.
  * It is used to clear the canvas.
- * 
- * The engine calls this function every frame.
- * 
- * You should not need to call this function manually,
- * it is exposed for convenience.
  */
 function clear() {
   background(CANVAS_WIDTH, CANVAS_HEIGHT, globalColor);
@@ -208,7 +203,7 @@ function update(callback: Function) {
   let then = Date.now(), now = 0;
   requestAnimationFrame(() => {
     now = Date.now();
-    clear(); callback && callback(now - then);
+    callback && callback(now - then);
     then = now;
     requestAnimationFrame(() => update(callback));
   });
