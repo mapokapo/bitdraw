@@ -47,7 +47,7 @@ This library is focused on simplicity and intuition. As such, it tries to minimi
 
 Also included are some convenient classes that will make some parts of your app easier to maintain (e.g. Vector manipulation, Hex/RGB color conversion, etc.).
 
-> Note: Although this library is published on npm, it is still in the pre-release stage. Expected bugs and unexpected behavior, as well as breaking changes.
+> Note: Although this library is published on npm, it is still in the pre-release stage. Feel free to use it, but expect bugs and unexpected behavior, as well as breaking changes.
 
 ### Built With
 This project was made and built with [Typescript](https://www.typescriptlang.org/), and is made for use in a [Typescript environment](https://webpack.js.org/guides/typescript/), although it is not required.
@@ -106,7 +106,7 @@ You can also import the library using the CommonJS `require()` function, althoug
 
 You can view more at the [example project](/misc/example).
 
-[Bitdraw Code](/misc/images/example.png?raw=true)
+![Bitdraw Code](/misc/images/example.png?raw=true)
 
 ## TODO :white_check_mark:
 - [ ] Support transparency in the Color class.
