@@ -110,6 +110,9 @@ You can view more at the [example project](/misc/example).
 
 ## TODO :white_check_mark:
 - [ ] Support transparency in the Color class.
+- [ ] Add static values in the Color class for convenience (eg. `Color.GREEN`);
+- [ ] Decouple the canvas element from the library - let the user make a canvas element themselves that the library can use
+- [ ] (?) Stop the `update()` function from activating the main loop before `setup()` has finished executing its callback
 - [ ] Implement additional layers over the Canvas API (text, transform, styles, shapes...)
 
 See the [open issues](https://github.com/mapokapo/bitdraw/issues) for a list of proposed features (and known issues).
